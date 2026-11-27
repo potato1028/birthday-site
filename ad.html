@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>특별 이미지</title>
+    <style>
+        html, body {
+            margin: 0;
+            width: 100%;
+            min-height: 100%;
+        }
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100dvh;
+            background: #1d1d1d;
+        }
+        img {
+            display: block;
+            max-width: 100vw;
+            max-height: 100dvh;
+            width: auto;
+            height: auto;
+            object-fit: contain;
+        }
+        .missing {
+            color: #fff;
+            padding: 20px;
+            font: 16px/1.5 sans-serif;
+            text-align: center;
+        }
+        [hidden] { display: none !important; }
+    </style>
+</head>
+<body>
+    <!-- 이 파일만 원하는 이미지로 바꾸면 새 창의 내용이 바뀝니다. -->
+    <img src="Resource/Ad/two.jpeg"
+         alt="새 창에서 표시할 이미지"
+         onerror="this.hidden=true;document.getElementById('missing').hidden=false;">
+    <p id="missing" class="missing" hidden>
+        Resource/Ad/two.jpeg 파일을 넣어 주세요.
+    </p>
+</body>
+</html>
